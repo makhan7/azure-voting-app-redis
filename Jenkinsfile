@@ -5,7 +5,6 @@ pipeline {
         stage('Verify Branch') {
             steps {
               echo "${env.GIT_BRANCH}"
-              echo "Welcome Sana"
             }
         }
     }
