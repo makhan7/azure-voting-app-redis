@@ -7,5 +7,10 @@ pipeline {
               echo "${env.GIT_BRANCH}"
             }
         }
+        stage('Docker Build'){
+            steps{
+        pwsh(script: 'docker images -a')
+            }
+        }
     }
 }
