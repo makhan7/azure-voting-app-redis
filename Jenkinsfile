@@ -1,16 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Verify Branch') {
+        stage('Build') {
             steps {
-              echo "${env.GIT_BRANCH}"
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
-        }
-        stage('Docker Build'){
-            steps {
-             pwsh -command "docker images -a"
-            }}
         }
     }
 }
-
