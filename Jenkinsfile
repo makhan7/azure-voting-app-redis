@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Verify Branch') {
             steps {
@@ -8,9 +7,10 @@ pipeline {
             }
         }
         stage('Docker Build'){
-            steps{
-       pwsh -command "docker images -a"
-            }
+            steps {
+             pwsh -command "docker images -a"
+            }}
         }
     }
 }
+
