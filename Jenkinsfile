@@ -7,15 +7,5 @@ pipeline {
               echo "${env.GIT_BRANCH}"
             }
         }
-         stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
-         stage('Docker Build'){
-            steps{
-        pwsh(script: 'docker images -a')
-    }
-    }
     }
 }
