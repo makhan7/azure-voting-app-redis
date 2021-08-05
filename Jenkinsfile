@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                powershell 'Write-Output "Hello, World!"'
+                powershell 'docker images -a"'
             }
         }
     }
