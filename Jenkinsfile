@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build via gitbut') {
             steps {
                 powershell "docker images -a"
                  powershell(script: """
