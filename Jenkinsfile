@@ -9,6 +9,7 @@ pipeline {
             docker images -a
             docker build -t jenkins-pipeline .
             docker images -a
+            docker ps
             cd ..
             """)
             }
