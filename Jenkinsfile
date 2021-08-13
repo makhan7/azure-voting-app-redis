@@ -16,7 +16,6 @@ pipeline {
         
     }
 }
-
 // pipeline {
 //     agent any
 
