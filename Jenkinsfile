@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build github') {
             steps {
                 powershell "docker images -a"
                  powershell(script: """
@@ -13,9 +13,7 @@ pipeline {
             docker version
             cd ..
             """)
-            }
-
-            
+            }   
         }
     }
 }
