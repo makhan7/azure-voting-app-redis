@@ -10,6 +10,7 @@ pipeline {
             docker build -t jenkins-pipeline .
             docker images -a
             docker ps
+            docker version
             cd ..
             """)
             }
